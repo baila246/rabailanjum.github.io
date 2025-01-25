@@ -1,0 +1,118 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(light.jpg);
+    background-size:cover ;
+   backdrop-filter:blur(7px) ;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin: auto;
+    box-sizing: content-box;
+    flex-wrap:nowrap;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    width: 30%;
+    color: rgb(56, 13, 13);
+    font-weight: 900;
+    font-size: 20px;
+    
+}
+input , select{
+    flex-basis: 50%;
+   
+    margin:5px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    border: 3px solid gray;
+}
+button{
+    margin: 30px;
+    padding: 10px;
+    border-radius:60px ;
+    background-color: rgb(42, 7, 7);
+    color: aliceblue;
+   font-size: large;
+}
+button:hover{
+    background-color: gray;
+}
+h4{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+
+h2{
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    
+
+    text-align: left;
+    font-family: "Dancing Script", serif;
+    font-optical-sizing: auto;
+    font-style: italic;
+     color: rgb(234, 181, 181);
+     font-weight: 900;
+     background-image: url('download.png');
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-size: 40px;
+}
+label{
+    margin: 10px;
+}
+.bank{
+    height: 200px;
+    width: 300px;
+    margin: auto;
+    
+}
+.col-25{
+    position: relative;
+    top: 50%;
+    left: 80%;
+    translate: calc(50% , 50%);
+    border: 1px solid saddlebrown;
+    margin: 10px;
+    padding:0 30px 0 30px;
+    background-color: #f5f5f5;
+}
+.inline{
+    display: block;
+}
+.inline .col-25{
+     display: inline-block;
+    position: absolute;
+    top: 60%;
+    left:80%;
+}
+.price{
+    margin-left: 40px;
+    float: right;
+    color: #000;
+}
+p a{
+    text-decoration: none;
+    color: rgb(117, 27, 27);
+    font-weight: 800;
+    font-size: 20px;
+}
+p{
+    color: rgb(114, 39, 39);
+    font-size:20px ;
+    font-weight: 800;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}

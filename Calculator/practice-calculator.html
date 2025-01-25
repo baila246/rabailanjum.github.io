@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html,body{
+        height: 100%;
+    }
+    body{
+        background-color: rgb(227, 189, 202);
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dface5+0,fba6e1+49,ed8cff+54,f779c0+100 */
+background: radial-gradient(ellipse at center,  #dface5 0%,#fba6e1 49%,#ed8cff 54%,#f779c0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+           
+           background-size: cover;
+    }
+    .calculator{
+        width: 300px;
+        background: #f779c0;
+        text-align: center;
+        padding: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 5px 8px rgb(176, 33, 133),0 5px 10px rgba(0, 0, 0,10.75);
+        
+    }
+    .res{
+        width: 90%;
+        background-color: antiquewhite;
+        padding: 15px;
+        font-size: 24px;
+        text-align: right;
+        margin: 2px;
+        height: 30px;
+        color: #4a0855;
+        box-shadow: inset 2px 3px 3px rgb(83, 14, 74),0 2px 3px rgb(176, 33, 133);
+        overflow: hidden;
+    }
+    ul li{
+        cursor: pointer;
+        position:relative;
+        width: 15%;
+        line-height: 36px;
+        padding: 7px;
+        float: left;
+        font-size: 24px;
+        list-style: none;
+        margin:6px 7px 6px 0;
+        background-color: #d98bc0;
+        box-shadow:0 4px  rgb(131, 74, 124) , 0 6px 3px rgb(103, 22, 50);
+        
+    }
+    ul li:active{
+        top: -4px;
+        box-shadow: none;
+    }
+    ul li:nth-child(16){
+        height: 96px;
+      line-height: 80px;
+    }
+    ul li:last-child{
+        
+        width: 60%;
+        top: -59px;
+    }
+  
+</style>
+<body>
+    <div class="calculator">
+        <div class="res">0</div>
+            <ul>
+                <li>C</li>
+                <li>*</li>
+                <li>/</li>
+                <li>.</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>+</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>-</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>=</li>
+                <li>0</li>
+            </ul>
+        
+    </div>
+    <script>
+        const result=document.querySelector(".res")
+        const calculator=document.querySelector(".calculator")
+        const lis=document.querySelectorAll("ul li")
+          
+            lis.forEach((node)=>{
+                node.addEventListener('mousedown',function(event){
+            console.log("value")
+          const value=  node.innerText.trim()
+        const text=  result.innerText.trim("")
+        if(text=='0'||text=='undefined'||text=='infinity'){
+             result.innerText=''
+             return true;
+        }
+          if(value=='C'){
+           result.innerText=''
+           return true;
+          }
+            if(value=='='){
+                let solution=eval(text)
+                result.innerText=solution
+                return true;
+            }
+             result.append(value)
+            })
+            
+        })
+
+    </script>
+</body>
+</html>
